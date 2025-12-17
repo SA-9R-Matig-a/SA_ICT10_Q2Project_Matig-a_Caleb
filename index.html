@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyrotechnic University of Pasig - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        :root {
+            --maroon-dark: #800000;
+            --maroon-medium: #a00000;
+            --maroon-light: #c00000;
+            --maroon-very-light: #f5e6e6;
+            --gold-accent: #ffd700;
+        }
+        body {
+            background-color: var(--maroon-very-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: var(--maroon-dark);
+            padding: 15px 0;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: bold;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        .nav-link:hover {
+            color: var(--gold-accent) !important;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(128, 0, 0, 0.7), rgba(128, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .btn-hero {
+            background-color: var(--gold-accent);
+            color: var(--maroon-dark);
+            font-weight: bold;
+            padding: 10px 30px;
+            border-radius: 30px;
+            border: none;
+            font-size: 1.1rem;
+        }
+        .btn-hero:hover {
+            background-color: #e6c200;
+            color: var(--maroon-dark);
+        }
+        .section-title {
+            color: var(--maroon-dark);
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: bold;
+            position: relative;
+        }
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: var(--gold-accent);
+            margin: 15px auto;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-title {
+            color: var(--maroon-dark);
+            font-weight: bold;
+        }
+        .card-text {
+            color: #555;
+        }
+        .btn-card {
+            background-color: var(--maroon-dark);
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+        .btn-card:hover {
+            background-color: var(--maroon-medium);
+            color: white;
+        }
+        .footer {
+            background-color: var(--maroon-dark);
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        .footer-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .footer-link {
+            color: var(--gold-accent);
+            text-decoration: none;
+        }
+        .footer-link:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Pyrotechnic University of Pasig</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="grade_calculator.html">Grade Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clubs.html">Clubs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Welcome to Pyrotechnic University of Pasig</h1>
+            <p class="hero-subtitle">Excellence in Education Since 2025</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container" id="about">
+        <h2 class="section-title">About Our School</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Pyrotechnic University of Pasig is a premier educational institution dedicated to nurturing young minds and preparing them for the challenges of creating fireworks. With a rich history spanning over three days, we take pride in our tradition of academic excellence and holistic development.</p>
+                <p>Our state-of-the-art facilities, experienced faculty, and innovative curriculum create an environment where students can thrive academically, socially, and emotionally.</p>
+                <a href="#" class="btn btn-card">Read More</a>
+            </div>
+            <div class="col-md-6">
+                <img src="https://www.livemint.com/rf/Image-621x414/LiveMint/Period1/2012/09/20/Photos/_DSC0157aa--621x414.jpg" alt="School Building" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="container mt-5">
+        <h2 class="section-title">Our Programs</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="STEM Program">
+                    <div class="card-body">
+                        <h5 class="card-title">STEM Program</h5>
+                        <p class="card-text">Our Science, Technology, Engineering, and Mathematics program prepares students for careers in these high-demand fields through hands-on learning and research opportunities.</p>
+                        <a href="#" class="btn btn-card">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" class="card-img-top" alt="Arts Program">
+                    <div class="card-body">
+                        <h5 class="card-title">Arts Program</h5>
+                        <p class="card-text">Our comprehensive arts program nurtures creativity through visual arts, music, theater, and dance, helping students develop their artistic talents and appreciation.</p>
+                        <a href="#" class="btn btn-card">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Sports Program">
+                    <div class="card-body">
+                        <h5 class="card-title">Sports Program</h5>
+                        <p class="card-text">We offer a wide range of competitive and recreational sports programs that promote physical fitness, teamwork, and sportsmanship among our students. Josua Ronnel Ortiz.</p>
+                        <a href="#" class="btn btn-card">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="footer-title">Pyrotechnic University of Pasig</h3>
+                    <p>123 Bulacan Street<br>Bocaue City, LC 12345<br>Phone: (123) 456-7890</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Admissions</a></li>
+                        <li><a href="#" class="footer-link">Calendar</a></li>
+                        <li><a href="#" class="footer-link">Parent Portal</a></li>
+                        <li><a href="#" class="footer-link">Staff Directory</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer-title">Connect With Us</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Facebook</a></li>
+                        <li><a href="#" class="footer-link">Twitter</a></li>
+                        <li><a href="#" class="footer-link">Instagram</a></li>
+                        <li><a href="#" class="footer-link">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2025 Pyrotechnic University of Pasig. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
