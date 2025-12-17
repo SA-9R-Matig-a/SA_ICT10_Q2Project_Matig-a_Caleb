@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Club Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+            :root {
+                --blue-dark: #0d1d4f;
+                --blue-medium: #172f78;
+                --blue-light: #3154bd;
+                --blue-very-light: #d7e5f7;
+                --gold-accent: #ffd700;
+            }
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-image: url(https://www.hollywoodreporter.com/wp-content/uploads/2025/08/20250806_VK-ED_VT_9758-e1756089733676.jpg?w=2000&h=1126&crop=1);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                color: #172f78;
+            }
+            .navbar {
+                background-color: var(--blue-dark);
+                padding: 15px 0;
+            }
+            .navbar-brand, .nav-link {
+                color: white !important;
+                font-weight: bold;
+            }
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            .nav-link:hover {
+                color: var(--gold-accent) !important;
+            }
+            #BigBox {
+                background-color: #0f110c;
+                border-radius: 10px;
+                max-width: 800px;
+                margin: 0 auto;
+                padding:40px;
+            }
+            h1 {
+                color: var(--blue-dark);
+                text-align: center;
+                border-bottom: 2px solid #3154bd;
+                padding-bottom: 10px;
+            }
+            select, #show-info {
+                padding: 10px;
+                margin: 10px 0;
+                width: 100%;
+                border: 1px solid #3154bd;
+                border-radius: 4px;
+                background-color: white;
+                color: #172f78;
+            }
+            #show-info {
+                background-color: #3154bd;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                transform: scale(1);
+                transition: all 0.3s ease-in-out;
+            }
+            #show-info:hover {
+                background-color: #0d1d4f;
+                    transform: scale(1.05);
+                    transition: all 0.3s ease-in-out;
+            }
+            #mute {
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #3154bd;
+                border-radius: 4px;
+                font-weight:bold;
+                background-color: white;
+                color: #172f78;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            #mute:hover {
+                background-color:#4c4d6e;
+            }
+            #club-info {
+                background-color: #d7e5f7;
+                padding: 15px;
+                border-radius: 5px;
+                margin-top: 20px;
+                border-left: 4px solid #3154bd;
+                color: #172f78;
+            }
+            label {
+                font-weight: bold;
+                color: #3154bd;
+            }
+            option {
+                padding: 5px;
+            }
+        option {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pyrotechnic University of Pasig</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="grade_calculator.html">Grade Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="clubs.html">Clubs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="BigBox" class="col-md-12 col-lg-12 col-sm-10">
+        <h1>University of Ado Club Information</h1>
+            
+        <label for="club-select">Select a club:</label>
+        <select id="club-select">
+            <option value="">-- Select a club --</option>
+            <option value="singing">Singing Club</option>
+            <option value="dance">Dance Club</option>
+            <option value="japan">Japanese Club</option>
+            <option value="film">Film Club</option>
+            <option value="art">Stylized Art Club</option>
+        </select>
+            
+        <button id="show-info" py-click="show_club_info">Show Club Information</button>
+            
+        <pre id="club-info"></pre>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="py" src="main.py"></script>
+</body>
+</html>
